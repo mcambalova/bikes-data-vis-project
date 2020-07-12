@@ -27,6 +27,17 @@ Before exploration, preliminary wrangling was performed:
 - duration in seconds was converted to duration in minutes
 - unnecessary columns not used in the subsequent explorations (start and end date and time, start and end station ID, start and end station latitude and longitude, bike ID, Bike Share for All, duration in seconds) were dropped afterwards  
 
+The final dataset is stored in .pkl format in [/data/bike_shares_master.pkl](bike_shares_master.pkl) and contains following columns:
+- __start_station_name__: the name of the start station
+- __end_station_name__: the name of the end station
+- __user_type__: same as above (subscriber/costumer)
+- __year__: year (2017 or 2018)
+- __month__: month name (January, February, ... December)
+- __day__: day in month (from 1 to 31)
+- __weekday__: day in week (Monday, Tuesday, ... Sunday)
+- __hour__: hour in day (from 0 to 23)
+- __duration_min__: trip duration in minutes  
+
 
 ## Summary of Findings
 
@@ -51,4 +62,35 @@ I'd like to combine the created bi- and multivariate visualizations to illustrat
 
 ## Key Insights for Presentation
 
-Trip duration and the number of rides depends on several factors including the time of day, day of a week, and whether the user is a subscriber or not. 
+Trip duration and the number of trips depends on several factors including the time of day, day of a week, and whether the user is a subscriber or not. I've chosen various visualizations using various level of detail to document the findings in a logical way.  
+
+
+## Resources
+
+Here is a list of resources used when working on the project:
+
+- Numpy's zfill method documentation: [zfill](https://numpy.org/doc/stable/reference/generated/numpy.char.zfill.html)
+- Usage of the Numpy's zfill method described in a post: [Adding leading zeros to strings in NumPy array](https://stackoverflow.com/questions/55376333/adding-leading-zeros-to-strings-in-numpy-array)
+- Zipfile module documentation: [zipfile](https://docs.python.org/3/library/zipfile.html)
+- Usage of zipfile in a post: [Unzipping files in Python](https://stackoverflow.com/questions/3451111/unzipping-files-in-python)
+- Glob module documentation: [glob](https://docs.python.org/3/library/glob.html)
+- Documentation of datetime properties to obtain date and time portions: [Datetimelike properties](https://pandas.pydata.org/pandas-docs/stable/reference/series.html#datetimelike-properties)
+- Pandas to_pickle() and read_pickle() method documentation:
+    - [to_pickle() method](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.to_pickle.html)
+    - [read_pickle() method](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_pickle.html)
+- Ford GoBike on Wiki: [Bay Wheels](https://en.wikipedia.org/wiki/Bay_Wheels)
+- San Francisco on Wiki: [San Francisco](https://en.wikipedia.org/wiki/San_Francisco#Climate)
+- A post on combining multiple lists into a dataframe: [Take multiple lists into dataframe](https://stackoverflow.com/questions/30522724/take-multiple-lists-into-dataframe)
+- A post on colorbar: [One horizontal colorbar for seaborn heatmaps subplots and Annot Issue with xticklabels](https://stackoverflow.com/questions/45122416/one-horizontal-colorbar-for-seaborn-heatmaps-subplots-and-annot-issue-with-xtick)
+- Posts helpful when creating the explanatory visualizations:
+    - [Hiding axis text in matplotlib plots](https://stackoverflow.com/questions/2176424/hiding-axis-text-in-matplotlib-plots)
+    - [Figure Title](https://matplotlib.org/3.1.1/gallery/subplots_axes_and_figures/figure_title.html)
+    - [Multi Image](https://matplotlib.org/gallery/images_contours_and_fields/multi_image.html#sphx-glr-gallery-images-contours-and-fields-multi-image-py)
+    - [matplotlib: colorbars and its text labels](https://stackoverflow.com/questions/15908371/matplotlib-colorbars-and-its-text-labels)
+    - [Top label for matplotlib colorbars](https://stackoverflow.com/questions/33737427/top-label-for-matplotlib-colorbars)
+    - [Matplotlib tight_layout() doesn't take into account figure suptitle](https://stackoverflow.com/questions/8248467/matplotlib-tight-layout-doesnt-take-into-account-figure-suptitle)
+    - [Rotate tick labels in subplot (Pyplot, Matplotlib, gridspec)](https://stackoverflow.com/questions/31186019/rotate-tick-labels-in-subplot-pyplot-matplotlib-gridspec/52461208)
+    - [Python xticks in subplots](https://stackoverflow.com/questions/19626530/python-xticks-in-subplots)
+- lessons learnt in the Data Wrangling part of Data Analyst Nanodegree Program at Udacity  
+
+Note: Common libraries such as NumPy, Pandas, Seaborn and others are not listed here. 
