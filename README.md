@@ -27,7 +27,7 @@ Before exploration, preliminary wrangling was performed:
 - duration in seconds was converted to duration in minutes
 - unnecessary columns not used in the subsequent explorations (start and end date and time, start and end station ID, start and end station latitude and longitude, bike ID, Bike Share for All, duration in seconds) were dropped afterwards  
 
-The final dataset is stored in .pkl format in [/data/bike_shares_master.pkl](bike_shares_master.pkl) and contains following columns:
+The final dataset is stored in .pkl format zipped in [bike_shares_master.zip](/data) and contains following columns:
 - __start_station_name__: the name of the start station
 - __end_station_name__: the name of the end station
 - __user_type__: same as above (subscriber/costumer)
